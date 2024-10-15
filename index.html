@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form">
+        <label for="name">Name:-</label>
+        <input type="text" id="text" name="name"><br><br>
+        <label for="email">Email:-</label>
+        <input type="email" id="mail" name="email"><br><br>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+    <h2>Stored Information</h2>
+    <p><strong>Name:</strong>
+        <span id="sname"></span>
+    </p>
+    <p><strong>Email:</strong>
+        <span id="smail"></span>
+    </p>
+
+    <script>
+        form = document.getElementById("form");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault()
+
+            name = document.getElementById("text");
+            localStorage.setItem("name", text.value);
+            x = localStorage.getItem("name");
+            sname.innerHTML = x
+
+            mail = document.getElementById("mail");
+            sessionStorage.setItem("mail", mail.value);
+            y = sessionStorage.getItem("mail");
+            smail.innerHTML = y
+        })
+    </script>
+</body>
+
+</html>
+<!-- <!DOCTYPE html>
+
+    <script>
+        // Function to handle form submission
+            // Display the stored values
+            displayStoredData();
+        });
+
+        // Function to display stored data when the page is reloaded
+        function displayStoredData() {
+            var storedName = localStorage.getItem("name");
+            var storedEmail = sessionStorage.getItem("email");
+
+            // Check if data is available in localStorage and sessionStorage
+            if (storedName) {
+                document.getElementById("storedName").textContent = storedName;
+            }
+            if (storedEmail) {
+                document.getElementById("storedEmail").textContent = storedEmail;
+            }
+        }
+
+        // Display stored data when the page is reloaded
+        window.onload = function() {
+            displayStoredData();
+        };
+    </script>
+
+</body>
+</html> -->
